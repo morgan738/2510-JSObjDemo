@@ -6,11 +6,11 @@ const pikachu = {
   type: "electric",
   gen: 1,
   name: "pikachu",
-  greeting: () => {
+  greeting: function () {
     return `Hello my name is ${this.name}. I am type ${this.type} 
     and I am from generation ${this.gen}`;
   },
-  secondFunc: function () {
+  secondFunc: () => {
     return "This is a pokemon";
   },
 };
@@ -20,5 +20,5 @@ function describeObj(obj) {
     console.log(`Key ${key} has value of ${obj[key]}`);
   }
 }
-
-describeObj(pikachu);
+console.log(pikachu.greeting());
+//describeObj(pikachu);
